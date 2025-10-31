@@ -82,6 +82,15 @@ public class TileSpawner : MonoBehaviour
     }
     private void SetSpriteImageTile()
     {
+        Sprite backImg = lsBackImg[0];
+        Sprite frontImg = lsFrontImg[queue.Dequeue()];
+        
+        if(backImg == null || frontImg == null)
+        {
+            this.SetSpriteImageTile();
+            return;
+        }
+
         _tile.GetComponent<Tile>().SetBackImg(lsBackImg[0]);
         _tile.GetComponent<Tile>().SetFrontImg(lsFrontImg[queue.Dequeue()]);
     }
@@ -99,7 +108,7 @@ public class TileSpawner : MonoBehaviour
 
         yield return new WaitForSeconds(timeDelay);
 
-        this.SetTileLevel();
+               this.SetTileLevel();
         this.SpawnTile();
     }
     private void ShuffleArray(int[] array)
