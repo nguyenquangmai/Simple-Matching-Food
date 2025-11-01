@@ -9,7 +9,7 @@ public class Collection : MonoBehaviour, IPointerClickHandler
 {
     private int _isClicked;
 
-    private void Start()
+    private void OnEnable()
     {
         _isClicked = PlayerPrefs.GetInt(this.GetComponent<Image>().sprite.name, 0);
         this.SetNotifySelected(_isClicked);
