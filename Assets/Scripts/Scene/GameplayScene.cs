@@ -53,6 +53,7 @@ public class GameplayScene : MonoBehaviour
     private void OnDestroy()
     {
         GameEvents.OnLevelChange.Clear();
+        StopAllCoroutines();
     }
 
     private void SetButtons()

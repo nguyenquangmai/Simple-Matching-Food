@@ -1,4 +1,5 @@
 using Assets.Scrips.Manager;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,6 +22,7 @@ public class TimeManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        DOTween.RestartAll();
         GameEvents.OnTimeLimitChange.Register(OnEnableTimeLimit);
     }
     private void OnDestroy()
@@ -38,17 +40,22 @@ public class TimeManager : MonoBehaviour
 
             txtTimeLimit.text = formattedTime;
 
+            sliderTimeLimit = GameObject.FindGameObjectWithTag(TagName.TAG_SLIDER_TIME_LIMIT).GetComponent<Slider>();
             sliderTimeLimit.value = timeLimit;
         }
         else
         {
             txtTimeLimit.text = "0:00";
+
+            sliderTimeLimit = GameObject.FindGameObjectWithTag(TagName.TAG_SLIDER_TIME_LIMIT).GetComponent<Slider>();
             sliderTimeLimit.value = 0f;
         }
     }
     public void SetTimeLimit()
     {
         _timeLimit = LevelManager.Instance.DataLevel.timeLimit;
+
+        sliderTimeLimit = GameObject.FindGameObjectWithTag(TagName.TAG_SLIDER_TIME_LIMIT).GetComponent<Slider>();
         sliderTimeLimit.maxValue = _timeLimit;
 
         GameEvents.OnTimeLimitChange.Raise(_timeLimit);

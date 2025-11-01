@@ -13,6 +13,7 @@ public static class TagName
     public static string TAG_CANVAS = "Canvas";
     public static string TAG_TIME_MANAGER = "TimeManager";
     public static string TAG_ADS_MANAGER = "AdsManager";
+    public static string TAG_SLIDER_TIME_LIMIT = "SliderTimeLimit";
 
     public static string PANEL_SELECT_LEVEL = "PanelSelectLevel";
     public static string PANEL_WIN_GAME = "PanelWinGame";

@@ -91,8 +91,8 @@ public class TileSpawner : MonoBehaviour
             return;
         }
 
-        _tile.GetComponent<Tile>().SetBackImg(lsBackImg[0]);
-        _tile.GetComponent<Tile>().SetFrontImg(lsFrontImg[queue.Dequeue()]);
+        _tile.GetComponent<Tile>().SetBackImg(backImg);
+        _tile.GetComponent<Tile>().SetFrontImg(frontImg);
     }
     private void DefaultReponsiveGrid()
     {

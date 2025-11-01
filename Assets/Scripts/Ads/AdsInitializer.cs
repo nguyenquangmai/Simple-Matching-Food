@@ -8,7 +8,6 @@ public class AdsInitializer : Singleton<AdsInitializer>, IUnityAdsInitialization
     [SerializeField] bool _testMode = true;
     
     private string _gameId;
-    private static AdsInitializer instance;
 
     protected override void Awake()
     {

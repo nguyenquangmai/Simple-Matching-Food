@@ -25,6 +25,7 @@ TagManager:
   - ButtonLevel
   - ImageCollection
   - AdsManager
+  - SliderTimeLimit
   layers:
   - Default
   - TransparentFX
