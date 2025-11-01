@@ -573,7 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AdsInitializer
   _androidGameId: 5975587
   _iOSGameId: 5975586
-  _testMode: 1
+  _testMode: 0
 --- !u!4 &1048297375
 Transform:
   m_ObjectHideFlags: 0
