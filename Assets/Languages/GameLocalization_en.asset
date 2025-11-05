@@ -76,6 +76,12 @@ MonoBehaviour:
     m_Localized: DETAIL
     m_Metadata:
       m_Items: []
+  - m_Id: 47492294713167872
+    m_Localized: 'CONGRATULATIONS!
+
+      YOU HAVE UNCLOCKED ALL COLLECTIONS!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

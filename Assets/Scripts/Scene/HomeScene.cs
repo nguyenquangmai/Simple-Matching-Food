@@ -24,8 +24,6 @@ public class HomeScene : MonoBehaviour
 
     private void Start()
     {
-        //Debug.Log("Sum of collection = " + SaveManager.Instance.GetDataCollection().name.Count);
-        //Debug.Log("Sum of list collection = " + ImageManager.Instance.LsFrontImg.Count);
     }
 
     private void SetDefault()

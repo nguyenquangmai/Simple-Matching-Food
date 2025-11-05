@@ -573,7 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AdsInitializer
   _androidGameId: 5975587
   _iOSGameId: 5975586
-  _testMode: 0
+  _testMode: 1
 --- !u!4 &1048297375
 Transform:
   m_ObjectHideFlags: 0
@@ -700,8 +700,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4280685064
+  m_fontColor: {r: 0.03137255, g: 0.07058824, b: 0.14901961, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

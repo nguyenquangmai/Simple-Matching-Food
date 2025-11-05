@@ -11,6 +11,7 @@ public class PanelCollections : MonoBehaviour
     [SerializeField] Button btnConfirm;
     [SerializeField] GameObject collections;
     [SerializeField] TextMeshProUGUI txtCount;
+    [SerializeField] TextMeshProUGUI txtNotifyCollection;
 
     private int _sumCollection, _countUnlocked;
     private GameObject _go;
@@ -39,7 +40,7 @@ public class PanelCollections : MonoBehaviour
             item.gameObject.SetActive(true);
         }
 
-        txtCount.text = $"{_countUnlocked}/{_sumCollection}";
+        this.SetTextMeshProUGUI();
     }
 
     private void OnDestroy()
@@ -58,6 +59,20 @@ public class PanelCollections : MonoBehaviour
             AudioManager.Instance.PlayAudioClip(EnumAudioClip.ClickedButton);
             UIManager.instance.ShowPanel(EnumPanelType.MainMenu);
         });
+    }
+
+    private void SetTextMeshProUGUI()
+    {
+        txtCount.text = $"{_countUnlocked}/{_sumCollection}";
+
+        _countUnlocked = _sumCollection;
+
+        if(_countUnlocked == _sumCollection)
+            txtNotifyCollection.gameObject.SetActive(true);
+        else
+            txtNotifyCollection.gameObject.SetActive(false);
+
+        return;
     }
 
     private void SetImageCollection(GameObject go)

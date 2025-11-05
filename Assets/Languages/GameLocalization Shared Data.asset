@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Key: txt_detail_collection
     m_Metadata:
       m_Items: []
+  - m_Id: 47492294713167872
+    m_Key: txt_collected_all_collections
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
